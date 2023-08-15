@@ -1,10 +1,10 @@
-import 'package:boilerplate/data/sharedpref/constants/preferences.dart';
-import 'package:boilerplate/di/service_locator.dart';
-import 'package:boilerplate/presentation/home/store/language/language_store.dart';
-import 'package:boilerplate/presentation/home/store/theme/theme_store.dart';
-import 'package:boilerplate/presentation/post/post_list.dart';
-import 'package:boilerplate/utils/locale/app_localization.dart';
-import 'package:boilerplate/utils/routes/routes.dart';
+import 'package:fuelflow/data/sharedpref/constants/preferences.dart';
+import 'package:fuelflow/di/service_locator.dart';
+import 'package:fuelflow/presentation/home/store/language/language_store.dart';
+import 'package:fuelflow/presentation/home/store/theme/theme_store.dart';
+import 'package:fuelflow/presentation/post/post_list.dart';
+import 'package:fuelflow/utils/locale/app_localization.dart';
+import 'package:fuelflow/utils/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:material_dialog/material_dialog.dart';
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 dense: true,
                 contentPadding: EdgeInsets.all(0.0),
                 title: Text(
-                  object.language!,
+                  object.language,
                   style: TextStyle(
                     color: _languageStore.locale == object.locale
                         ? Theme.of(context).primaryColor
@@ -123,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {
                   Navigator.of(context).pop();
                   // change user language based on selected locale
-                  _languageStore.changeLanguage(object.locale!);
+                  _languageStore.changeLanguage(object.locale);
                 },
               ),
             )

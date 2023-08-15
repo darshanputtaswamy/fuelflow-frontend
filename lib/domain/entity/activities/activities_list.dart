@@ -1,4 +1,4 @@
-import 'package:boilerplate/domain/entity/activities/activities.dart';
+import 'package:fuelflow/domain/entity/activities/activities.dart';
 
 class StoreActivitiesList {
   final List<StoreActivities>? activities;

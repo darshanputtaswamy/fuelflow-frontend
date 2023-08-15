@@ -1,4 +1,4 @@
-import 'package:boilerplate/domain/entity/subscription/subscription.dart';
+import 'package:fuelflow/domain/entity/subscription/subscription.dart';
 
 class SubscrptionHistory {
   final List<Subscription>? posts;

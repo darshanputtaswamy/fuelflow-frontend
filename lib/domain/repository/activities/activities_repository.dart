@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:boilerplate/domain/entity/activities/activities.dart';
-import 'package:boilerplate/domain/entity/activities/activities_list.dart';
+import 'package:fuelflow/domain/entity/activities/activities.dart';
+import 'package:fuelflow/domain/entity/activities/activities_list.dart';
 
 abstract class PostRepository {
   Future<StoreActivitiesList> getStoreActivitiesList(String store_uid);

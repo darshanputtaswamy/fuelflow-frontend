@@ -17,7 +17,7 @@ class StoreCreditOrderLineItems {
   });
 
   factory StoreCreditOrderLineItems.fromMap(Map<String, dynamic> json) => StoreCreditOrderLineItems(
-         uid : json['uid'],
+        uid : json['uid'],
         orderId : json['order_id'],
         vehicleId : json['vehicle_id'],
         liters : json['liters'],

@@ -1,5 +1,5 @@
-import 'package:boilerplate/domain/entity/store/store_user.dart';
-import 'package:boilerplate/domain/entity/subscription/subscription.dart';
+import 'package:fuelflow/domain/entity/store/store_user.dart';
+import 'package:fuelflow/domain/entity/subscription/subscription.dart';
 
 class Store {
   String? uid;

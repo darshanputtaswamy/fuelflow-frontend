@@ -1,6 +1,6 @@
-import 'package:boilerplate/core/domain/usecase/use_case.dart';
-import 'package:boilerplate/domain/entity/post/post.dart';
-import 'package:boilerplate/domain/repository/post/post_repository.dart';
+import 'package:fuelflow/core/domain/usecase/use_case.dart';
+import 'package:fuelflow/domain/entity/post/post.dart';
+import 'package:fuelflow/domain/repository/post/post_repository.dart';
 
 class UpdatePostUseCase extends UseCase<int, Post> {
   final PostRepository _postRepository;
