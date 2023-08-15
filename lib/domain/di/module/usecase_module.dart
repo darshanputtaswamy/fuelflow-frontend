@@ -2,6 +2,14 @@ import 'dart:async';
 
 import 'package:fuelflow/domain/repository/post/post_repository.dart';
 import 'package:fuelflow/domain/repository/user/user_repository.dart';
+
+import 'package:fuelflow/domain/repository/activities/activities_repository.dart';
+import 'package:fuelflow/domain/usecase/activities/delete_activities_usecase.dart';
+import 'package:fuelflow/domain/usecase/activities/find_activity_by_id_usecase.dart';
+import 'package:fuelflow/domain/usecase/activities/get_activities_usecase.dart';
+import 'package:fuelflow/domain/usecase/activities/insert_activity_usecase.dart';
+import 'package:fuelflow/domain/usecase/activities/udpate_activity_usecase.dart';
+
 import 'package:fuelflow/domain/usecase/post/delete_post_usecase.dart';
 import 'package:fuelflow/domain/usecase/post/find_post_by_id_usecase.dart';
 import 'package:fuelflow/domain/usecase/post/get_post_usecase.dart';
@@ -42,5 +50,25 @@ mixin UseCaseModule {
     getIt.registerSingleton<DeletePostUseCase>(
       DeletePostUseCase(getIt<PostRepository>()),
     );
+
+
+  // activities:--------------------------------------------------------------------
+    getIt.registerSingleton<GetActivitiesUseCase>(
+      GetActivitiesUseCase(getIt<StoreActivitiesRepository>()),
+    );
+    getIt.registerSingleton<FindActivitiesByIdUseCase>(
+      FindActivitiesByIdUseCase(getIt<StoreActivitiesRepository>()),
+    );
+    getIt.registerSingleton<InsertActivitiesUseCase>(
+      InsertActivitiesUseCase(getIt<StoreActivitiesRepository>()),
+    );
+    getIt.registerSingleton<UpdateActivitiesUseCase>(
+      UpdateActivitiesUseCase(getIt<StoreActivitiesRepository>()),
+    );
+
+    getIt.registerSingleton<DeleteActivitiesUseCase>(
+      DeleteActivitiesUseCase(getIt<StoreActivitiesRepository>()),
+    );
+
   }
 }
